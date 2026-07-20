@@ -1,0 +1,10 @@
+# DS-8555 Predictive Analysis - Python environment
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.4
+statsmodels>=0.14
+matplotlib>=3.8
+jupyterlab>=4.0
+notebook>=7.0
+ISLP>=0.4          # ISLP textbook datasets (Carseats, etc.)

@@ -1,0 +1,23 @@
+# --- Kaggle competition data (do not redistribute; see data/README.md) ---
+data/*.csv
+train.csv
+test.csv
+sample_submission.csv
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
