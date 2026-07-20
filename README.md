@@ -41,14 +41,20 @@ reviewed independently.
 | `Q2_Stepwise_Lasso_Simulation.ipynb` | ISLP Ch. 6 Applied Ex. 8 — stepwise selection under Mallow's $C_p$, and the lasso with cross-validated $\lambda$ |
 | `Q3_Abalone_Regularization_PCR.ipynb` | Kaggle Playground Series S4E4 — lasso-informed subset selection and principal components regression |
 
-### Headline results (Kaggle abalone, metric = RMSLE)
+### Headline results (Kaggle abalone, metric = RMSLE — lower is better)
 
-| Model | Validation RMSLE | Predictors |
-|---|---|---|
-| Baseline (predict the mean) | 0.2881 | 0 |
-| Lasso, minimum-error λ | 0.1559 | 35 of 37 |
-| **Model A — OLS on 1-SE lasso subset** | **0.1564** | **19 of 37** |
-| **Model B — PCR** | **0.1559** | 37 components |
+| Model | Validation | Public LB | Private LB | Predictors |
+|---|---|---|---|---|
+| Baseline (predict the mean) | 0.2881 | — | — | 0 |
+| Lasso, minimum-error λ | 0.1559 | — | — | 35 of 37 |
+| **Model A — OLS on 1-SE lasso subset** | 0.1564 | **0.15537** | 0.15440 | **19 of 37** |
+| **Model B — PCR** | 0.1559 | **0.15484** | 0.15376 | 37 components |
+| Week 2 — gradient boosting | 0.152 | 0.14813 | 0.14783 | 8 |
+
+The validation ranking held on the leaderboard: PCR edged out the lasso subset on both the holdout and
+the public leaderboard. Both Week 3 models trail the Week 2 gradient boosting entry, which is expected —
+ring count depends on the predictors non-linearly, and a tree ensemble captures interactions that a
+linear model can only represent if they are written into the design matrix by hand.
 
 ### Findings worth flagging
 
